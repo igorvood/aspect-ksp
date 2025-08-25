@@ -1,0 +1,147 @@
+package test.metaEnum
+
+import java.util.EnumMap
+import javax.`annotation`.processing.Generated
+import ru.vood.dmgen.`annotation`.MetaUKs
+import ru.vood.dmgen.datamodel.sealedData.DealEntity
+import ru.vood.dmgen.datamodel.sealedData.DealParamaggregateEntity
+import ru.vood.dmgen.datamodel.sealedData.DealParamaggregate_PKContext
+import ru.vood.dmgen.datamodel.sealedData.Deal_PKContext
+import ru.vood.dmgen.datamodel.sealedData.OptionalDealParamEntity
+import ru.vood.dmgen.datamodel.sealedData.OptionalDealParam_PKContext
+import ru.vood.dmgen.datamodel.sealedData.OptionalDealParam_UKContext
+import ru.vood.dmgen.datamodel.sealedData.intf.IEntityOrigin
+import ru.vood.dmgen.datamodel.sealedData.intf.UKEntityData
+import ru.vood.dmgen.datamodel.sealedData.metaEnum.EntityEnum
+import ru.vood.dmgen.datamodel.sealedData.oneOf.DealOneDataEntity
+import ru.vood.dmgen.datamodel.sealedData.oneOf.DealOneData_PKContext
+import ru.vood.dmgen.datamodel.sealedData.oneOf.DealTwoDataEntity
+import ru.vood.dmgen.datamodel.sealedData.oneOf.DealTwoData_PKContext
+import ru.vood.dmgen.datamodel.sealedData.oneOf.OneOfDtoEntity
+import ru.vood.dmgen.datamodel.sealedData.oneOf.OneOfDto_PKContext
+import ru.vood.dmgen.dto.SimpleColumnName
+import ru.vood.dmgen.dto.TypeUk
+
+@Generated(value = ["ru.vood.processor.datamodel.generator.meta.UniqueKeyMapGenerator"])
+@MetaUKs
+public enum class UniqueKeyEnum {
+  Deal_PK,
+  DealParamaggregate_PK,
+  OptionalDealParam_UK,
+  OptionalDealParam_PK,
+  OneOfDto_PK,
+  DealOneData_PK,
+  DealTwoData_PK,
+  ;
+
+  public fun ukData(): UKEntityData<out IEntityOrigin> = uniqueKeyMap[this]!!
+
+  public companion object {
+    public val uniqueKeyMap:
+        EnumMap<ru.vood.dmgen.datamodel.sealedData.metaEnum.UniqueKeyEnum, UKEntityData<out IEntityOrigin>>
+        = EnumMap(
+    mapOf(
+    Deal_PK to UKEntityData(
+    ukName = Deal_PK,
+    columns = listOf(
+    SimpleColumnName("id"),
+    ),
+    serializer = Deal_PKContext.serializer(),
+    ukClass = Deal_PKContext::class,
+    entity = EntityEnum.Deal,
+    extractContext = {data: DealEntity -> Deal_PKContext(
+    data.id,
+    )
+    },
+    typeUk = TypeUk.PK
+    ),
+    DealParamaggregate_PK to UKEntityData(
+    ukName = DealParamaggregate_PK,
+    columns = listOf(
+    SimpleColumnName("dealId"),
+    ),
+    serializer = DealParamaggregate_PKContext.serializer(),
+    ukClass = DealParamaggregate_PKContext::class,
+    entity = EntityEnum.DealParamaggregate,
+    extractContext = {data: DealParamaggregateEntity -> DealParamaggregate_PKContext(
+    data.dealId,
+    )
+    },
+    typeUk = TypeUk.PK
+    ),
+    OptionalDealParam_UK to UKEntityData(
+    ukName = OptionalDealParam_UK,
+    columns = listOf(
+    SimpleColumnName("paramId"),
+    ),
+    serializer = OptionalDealParam_UKContext.serializer(),
+    ukClass = OptionalDealParam_UKContext::class,
+    entity = EntityEnum.OptionalDealParam,
+    extractContext = {data: OptionalDealParamEntity -> OptionalDealParam_UKContext(
+    data.paramId,
+    )
+    },
+    typeUk = TypeUk.UK
+    ),
+    OptionalDealParam_PK to UKEntityData(
+    ukName = OptionalDealParam_PK,
+    columns = listOf(
+    SimpleColumnName("dealId"),
+    ),
+    serializer = OptionalDealParam_PKContext.serializer(),
+    ukClass = OptionalDealParam_PKContext::class,
+    entity = EntityEnum.OptionalDealParam,
+    extractContext = {data: OptionalDealParamEntity -> OptionalDealParam_PKContext(
+    data.dealId,
+    )
+    },
+    typeUk = TypeUk.PK
+    ),
+    OneOfDto_PK to UKEntityData(
+    ukName = OneOfDto_PK,
+    columns = listOf(
+    SimpleColumnName("dealId"),
+    ),
+    serializer = OneOfDto_PKContext.serializer(),
+    ukClass = OneOfDto_PKContext::class,
+    entity = EntityEnum.OneOfDto,
+    extractContext = {data: OneOfDtoEntity -> OneOfDto_PKContext(
+    data.dealId,
+    )
+    },
+    typeUk = TypeUk.PK
+    ),
+    DealOneData_PK to UKEntityData(
+    ukName = DealOneData_PK,
+    columns = listOf(
+    SimpleColumnName("dealId"),
+    ),
+    serializer = DealOneData_PKContext.serializer(),
+    ukClass = DealOneData_PKContext::class,
+    entity = EntityEnum.DealOneData,
+    extractContext = {data: DealOneDataEntity -> DealOneData_PKContext(
+    data.dealId,
+    )
+    },
+    typeUk = TypeUk.PK
+    ),
+    DealTwoData_PK to UKEntityData(
+    ukName = DealTwoData_PK,
+    columns = listOf(
+    SimpleColumnName("dealId"),
+    ),
+    serializer = DealTwoData_PKContext.serializer(),
+    ukClass = DealTwoData_PKContext::class,
+    entity = EntityEnum.DealTwoData,
+    extractContext = {data: DealTwoDataEntity -> DealTwoData_PKContext(
+    data.dealId,
+    )
+    },
+    typeUk = TypeUk.PK
+    ),
+    )
+    )
+
+  }
+}
+

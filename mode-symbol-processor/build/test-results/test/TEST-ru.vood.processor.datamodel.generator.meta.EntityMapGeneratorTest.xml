@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.vood.processor.datamodel.generator.meta.EntityMapGeneratorTest" tests="2" skipped="0" failures="1" errors="0" timestamp="2025-08-25T13:39:56.440Z" hostname="vood" time="0.026">
+  <properties/>
+  <testcase name="compareTestedFiles()" classname="ru.vood.processor.datamodel.generator.meta.EntityMapGeneratorTest" time="0.0"/>
+  <testcase name="[1] TestCase(expectedClassFile=EntityEnum)" classname="ru.vood.processor.datamodel.generator.meta.EntityMapGeneratorTest" time="0.024">
+    <failure message="org.opentest4j.AssertionFailedError: expected: &lt;package test.metaEnum&#10;&#10;import java.util.EnumMap&#10;import javax.`annotation`.processing.Generated&#10;import kotlin.String&#10;import ru.vood.dmgen.`annotation`.FlowEntityType&#10;import ru.vood.dmgen.`annotation`.MetaEntities&#10;import ru.vood.dmgen.datamodel.sealedData.DealDetail&#10;import ru.vood.dmgen.datamodel.sealedData.DealEntity&#10;import ru.vood.dmgen.datamodel.sealedData.DealParamaggregateDetail&#10;import ru.vood.dmgen.datamodel.sealedData.DealParamaggregateEntity&#10;import ru.vood.dmgen.datamodel.sealedData.NoFKAndUkDetail&#10;import ru.vood.dmgen.datamodel.sealedData.NoFKAndUkEntity&#10;import ru.vood.dmgen.datamodel.sealedData.OptionalDealParamDetail&#10;import ru.vood.dmgen.datamodel.sealedData.OptionalDealParamEntity&#10;import ru.vood.dmgen.datamodel.sealedData.intf.EntityData&#10;import ru.vood.dmgen.datamodel.sealedData.intf.IEntityData&#10;import ru.vood.dmgen.datamodel.sealedData.intf.SealedEntityData&#10;import ru.vood.dmgen.datamodel.sealedData.oneOf.DealOneDataDetail&#10;import ru.vood.dmgen.datamodel.sealedData.oneOf.DealOneDataEntity&#10;import ru.vood.dmgen.datamodel.sealedData.oneOf.DealTwoDataDetail&#10;import ru.vood.dmgen.datamodel.sealedData.oneOf.DealTwoDataEntity&#10;import ru.vood.dmgen.datamodel.sealedData.oneOf.OneOfDtoDetail&#10;import ru.vood.dmgen.datamodel.sealedData.oneOf.OneOfDtoEntity&#10;&#10;@Generated(value = [&quot;ru.vood.processor.datamodel.generator.meta.EntityMapGenerator&quot;])&#10;@MetaEntities&#10;public enum class EntityEnum {&#10;  Deal,&#10;  DealOneData,&#10;  DealParamaggregate,&#10;  DealTwoData,&#10;  NoFKAndUk,&#10;  OneOfDto,&#10;  OptionalDealParam,&#10;  ;&#10;&#10;  public fun entityData(): IEntityData = entityDataMap[this]!!&#10;&#10;  public companion object {&#10;    private val entityDataMap:&#10;        EnumMap&lt;ru.vood.dmgen.datamodel.sealedData.metaEnum.EntityEnum, IEntityData&gt; = EnumMap(&#10;      mapOf(&#10;            Deal to EntityData(&#10;                designClass = ru.vood.dmgen.datamodel.sealedData.Deal::class,&#10;                runtimeClass = DealEntity::class,&#10;                runtimeSyntheticClass = DealDetail::class,&#10;                serializer = DealEntity.serializer(),&#10;                serializerSynthetic = DealDetail.serializer(),&#10;                entityName = Deal,&#10;                comment = &quot;Это сущность Сделка&quot;,&#10;                entityType = FlowEntityType.AGGREGATE&#10;                ),&#10;            DealParamaggregate to EntityData(&#10;                designClass = ru.vood.dmgen.datamodel.sealedData.DealParamaggregate::class,&#10;                runtimeClass = DealParamaggregateEntity::class,&#10;                runtimeSyntheticClass = DealParamaggregateDetail::class,&#10;                serializer = DealParamaggregateEntity.serializer(),&#10;                serializerSynthetic = DealParamaggregateDetail.serializer(),&#10;                entityName = DealParamaggregate,&#10;                comment = &quot;Параметр сделки, Агрегат&quot;,&#10;                entityType = FlowEntityType.AGGREGATE&#10;                ),&#10;            NoFKAndUk to EntityData(&#10;                designClass = ru.vood.dmgen.datamodel.sealedData.NoFKAndUk::class,&#10;                runtimeClass = NoFKAndUkEntity::class,&#10;                runtimeSyntheticClass = NoFKAndUkDetail::class,&#10;                serializer = NoFKAndUkEntity.serializer(),&#10;                serializerSynthetic = NoFKAndUkDetail.serializer(),&#10;                entityName = NoFKAndUk,&#10;                comment = &quot;Параметр сделки, отношение к сделке один к одному&quot;,&#10;                entityType = FlowEntityType.INNER&#10;                ),&#10;            OptionalDealParam to EntityData(&#10;                designClass = ru.vood.dmgen.datamodel.sealedData.OptionalDealParam::class,&#10;                runtimeClass = OptionalDealParamEntity::class,&#10;                runtimeSyntheticClass = OptionalDealParamDetail::class,&#10;                serializer = OptionalDealParamEntity.serializer(),&#10;                serializerSynthetic = OptionalDealParamDetail.serializer(),&#10;                entityName = OptionalDealParam,&#10;                comment = &quot;Параметр сделки, отношение к сделке один к одному, опциональный&quot;,&#10;                entityType = FlowEntityType.INNER&#10;                ),&#10;            OneOfDto to SealedEntityData(&#10;            designClass = ru.vood.dmgen.datamodel.sealedData.oneOf.OneOfDto::class,&#10;            runtimeClass = OneOfDtoEntity::class,&#10;            runtimeSyntheticClass = OneOfDtoDetail::class,&#10;            serializer = OneOfDtoEntity.serializer(),&#10;            serializerSynthetic = OneOfDtoDetail.serializer(),&#10;            entityName = OneOfDto,&#10;            comment = &quot;Параметр сделки, отношение к сделке один к одному&quot;,&#10;            entityType = FlowEntityType.ONE_OF,&#10;            children = setOf(&#10;                  DealOneData,&#10;                  DealTwoData,&#10;            )&#10;            ),&#10;            DealOneData to EntityData(&#10;                designClass = ru.vood.dmgen.datamodel.sealedData.oneOf.DealOneData::class,&#10;                runtimeClass = DealOneDataEntity::class,&#10;                runtimeSyntheticClass = DealOneDataDetail::class,&#10;                serializer = DealOneDataEntity.serializer(),&#10;                serializerSynthetic = DealOneDataDetail.serializer(),&#10;                entityName = DealOneData,&#10;                comment = &quot;Параметр сделки, отношение к сделке один к одному&quot;,&#10;                entityType = FlowEntityType.INNER&#10;                ),&#10;            DealTwoData to EntityData(&#10;                designClass = ru.vood.dmgen.datamodel.sealedData.oneOf.DealTwoData::class,&#10;                runtimeClass = DealTwoDataEntity::class,&#10;                runtimeSyntheticClass = DealTwoDataDetail::class,&#10;                serializer = DealTwoDataEntity.serializer(),&#10;                serializerSynthetic = DealTwoDataDetail.serializer(),&#10;                entityName = DealTwoData,&#10;                comment = &quot;Параметр сделки, отношение к сделке один к одному&quot;,&#10;                entityType = FlowEntityType.INNER&#10;                ),&#10;            ))&#10;&#10;            public fun entityMetaByStr(`value`: String):&#10;                ru.vood.dmgen.datamodel.sealedData.metaEnum.EntityEnum = when(value) {&#10;              &quot;Deal&quot; -&gt; Deal&#10;              &quot;DealParamaggregate&quot; -&gt; DealParamaggregate&#10;              &quot;NoFKAndUk&quot; -&gt; NoFKAndUk&#10;              &quot;OptionalDealParam&quot; -&gt; OptionalDealParam&#10;              &quot;OneOfDto&quot; -&gt; OneOfDto&#10;              &quot;DealOneData&quot; -&gt; DealOneData&#10;              &quot;DealTwoData&quot; -&gt; DealTwoData&#10;              else -&gt; error(&quot;&quot;&quot;In ${EntityEnum::class.java.simpleName} not found enum with name&#10;                  $value&quot;&quot;&quot;)&#10;            }&#10;          }&#10;        }&#10;&gt; but was: &lt;package test.metaEnum&#10;&#10;import java.util.EnumMap&#10;import javax.`annotation`.processing.Generated&#10;import kotlin.String&#10;import ru.vood.dmgen.`annotation`.FlowEntityType&#10;import ru.vood.dmgen.`annotation`.MetaEntities&#10;import ru.vood.dmgen.datamodel.sealedData.DealDetail&#10;import ru.vood.dmgen.datamodel.sealedData.DealEntity&#10;import ru.vood.dmgen.datamodel.sealedData.DealParamaggregateDetail&#10;import ru.vood.dmgen.datamodel.sealedData.DealParamaggregateEntity&#10;import ru.vood.dmgen.datamodel.sealedData.NoFKAndUkDetail&#10;import ru.vood.dmgen.datamodel.sealedData.NoFKAndUkEntity&#10;import ru.vood.dmgen.datamodel.sealedData.OptionalDealParamDetail&#10;import ru.vood.dmgen.datamodel.sealedData.OptionalDealParamEntity&#10;import ru.vood.dmgen.datamodel.sealedData.oneOf.DealOneDataDetail&#10;import ru.vood.dmgen.datamodel.sealedData.oneOf.DealOneDataEntity&#10;import ru.vood.dmgen.datamodel.sealedData.oneOf.DealTwoDataDetail&#10;import ru.vood.dmgen.datamodel.sealedData.oneOf.DealTwoDataEntity&#10;import ru.vood.dmgen.datamodel.sealedData.oneOf.OneOfDtoDetail&#10;import ru.vood.dmgen.datamodel.sealedData.oneOf.OneOfDtoEntity&#10;import ru.vood.processor.datamodel.packageForDataModelConfigProcessorProviderTest.create.intf.EntityData&#10;import ru.vood.processor.datamodel.packageForDataModelConfigProcessorProviderTest.create.intf.IEntityData&#10;import ru.vood.processor.datamodel.packageForDataModelConfigProcessorProviderTest.create.intf.SealedEntityData&#10;&#10;@Generated(value = [&quot;ru.vood.processor.datamodel.generator.meta.EntityMapGenerator&quot;])&#10;@MetaEntities&#10;public enum class EntityEnum {&#10;  Deal,&#10;  DealOneData,&#10;  DealParamaggregate,&#10;  DealTwoData,&#10;  NoFKAndUk,&#10;  OneOfDto,&#10;  OptionalDealParam,&#10;  ;&#10;&#10;  public fun entityData(): IEntityData = entityDataMap[this]!!&#10;&#10;  public companion object {&#10;    private val entityDataMap:&#10;        EnumMap&lt;ru.vood.processor.datamodel.packageForDataModelConfigProcessorProviderTest.create.metaEnum.EntityEnum, IEntityData&gt;&#10;        = EnumMap(&#10;      mapOf(&#10;            Deal to EntityData(&#10;                designClass = ru.vood.dmgen.datamodel.sealedData.Deal::class,&#10;                runtimeClass = DealEntity::class,&#10;                runtimeSyntheticClass = DealDetail::class,&#10;                serializer = DealEntity.serializer(),&#10;                serializerSynthetic = DealDetail.serializer(),&#10;                entityName = Deal,&#10;                comment = &quot;Это сущность Сделка&quot;,&#10;                entityType = FlowEntityType.AGGREGATE&#10;                ),&#10;            DealParamaggregate to EntityData(&#10;                designClass = ru.vood.dmgen.datamodel.sealedData.DealParamaggregate::class,&#10;                runtimeClass = DealParamaggregateEntity::class,&#10;                runtimeSyntheticClass = DealParamaggregateDetail::class,&#10;                serializer = DealParamaggregateEntity.serializer(),&#10;                serializerSynthetic = DealParamaggregateDetail.serializer(),&#10;                entityName = DealParamaggregate,&#10;                comment = &quot;Параметр сделки, Агрегат&quot;,&#10;                entityType = FlowEntityType.AGGREGATE&#10;                ),&#10;            NoFKAndUk to EntityData(&#10;                designClass = ru.vood.dmgen.datamodel.sealedData.NoFKAndUk::class,&#10;                runtimeClass = NoFKAndUkEntity::class,&#10;                runtimeSyntheticClass = NoFKAndUkDetail::class,&#10;                serializer = NoFKAndUkEntity.serializer(),&#10;                serializerSynthetic = NoFKAndUkDetail.serializer(),&#10;                entityName = NoFKAndUk,&#10;                comment = &quot;Параметр сделки, отношение к сделке один к одному&quot;,&#10;                entityType = FlowEntityType.INNER&#10;                ),&#10;            OptionalDealParam to EntityData(&#10;                designClass = ru.vood.dmgen.datamodel.sealedData.OptionalDealParam::class,&#10;                runtimeClass = OptionalDealParamEntity::class,&#10;                runtimeSyntheticClass = OptionalDealParamDetail::class,&#10;                serializer = OptionalDealParamEntity.serializer(),&#10;                serializerSynthetic = OptionalDealParamDetail.serializer(),&#10;                entityName = OptionalDealParam,&#10;                comment = &quot;Параметр сделки, отношение к сделке один к одному, опциональный&quot;,&#10;                entityType = FlowEntityType.INNER&#10;                ),&#10;            OneOfDto to SealedEntityData(&#10;            designClass = ru.vood.dmgen.datamodel.sealedData.oneOf.OneOfDto::class,&#10;            runtimeClass = OneOfDtoEntity::class,&#10;            runtimeSyntheticClass = OneOfDtoDetail::class,&#10;            serializer = OneOfDtoEntity.serializer(),&#10;            serializerSynthetic = OneOfDtoDetail.serializer(),&#10;            entityName = OneOfDto,&#10;            comment = &quot;Параметр сделки, отношение к сделке один к одному&quot;,&#10;            entityType = FlowEntityType.ONE_OF,&#10;            children = setOf(&#10;                  DealOneData,&#10;                  DealTwoData,&#10;            )&#10;            ),&#10;            DealOneData to EntityData(&#10;                designClass = ru.vood.dmgen.datamodel.sealedData.oneOf.DealOneData::class,&#10;                runtimeClass = DealOneDataEntity::class,&#10;                runtimeSyntheticClass = DealOneDataDetail::class,&#10;                serializer = DealOneDataEntity.serializer(),&#10;                serializerSynthetic = DealOneDataDetail.serializer(),&#10;                entityName = DealOneData,&#10;                comment = &quot;Параметр сделки, отношение к сделке один к одному&quot;,&#10;                entityType = FlowEntityType.INNER&#10;                ),&#10;            DealTwoData to EntityData(&#10;                designClass = ru.vood.dmgen.datamodel.sealedData.oneOf.DealTwoData::class,&#10;                runtimeClass = DealTwoDataEntity::class,&#10;                runtimeSyntheticClass = DealTwoDataDetail::class,&#10;                serializer = DealTwoDataEntity.serializer(),&#10;                serializerSynthetic = DealTwoDataDetail.serializer(),&#10;                entityName = DealTwoData,&#10;                comment = &quot;Параметр сделки, отношение к сделке один к одному&quot;,&#10;                entityType = FlowEntityType.INNER&#10;                ),&#10;            ))&#10;&#10;            public fun entityMetaByStr(`value`: String):&#10;                ru.vood.processor.datamodel.packageForDataModelConfigProcessorProviderTest.create.metaEnum.EntityEnum&#10;                = when(value) {&#10;              &quot;Deal&quot; -&gt; Deal&#10;              &quot;DealParamaggregate&quot; -&gt; DealParamaggregate&#10;              &quot;NoFKAndUk&quot; -&gt; NoFKAndUk&#10;              &quot;OptionalDealParam&quot; -&gt; OptionalDealParam&#10;              &quot;OneOfDto&quot; -&gt; OneOfDto&#10;              &quot;DealOneData&quot; -&gt; DealOneData&#10;              &quot;DealTwoData&quot; -&gt; DealTwoData&#10;              else -&gt; error(&quot;&quot;&quot;In ${EntityEnum::class.java.simpleName} not found enum with name&#10;                  $value&quot;&quot;&quot;)&#10;            }&#10;          }&#10;        }&#10;&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;package test.metaEnum
+
+import java.util.EnumMap
+import javax.`annotation`.processing.Generated
+import kotlin.String
+import ru.vood.dmgen.`annotation`.FlowEntityType
+import ru.vood.dmgen.`annotation`.MetaEntities
+import ru.vood.dmgen.datamodel.sealedData.DealDetail
+import ru.vood.dmgen.datamodel.sealedData.DealEntity
+import ru.vood.dmgen.datamodel.sealedData.DealParamaggregateDetail
+import ru.vood.dmgen.datamodel.sealedData.DealParamaggregateEntity
+import ru.vood.dmgen.datamodel.sealedData.NoFKAndUkDetail
+import ru.vood.dmgen.datamodel.sealedData.NoFKAndUkEntity
+import ru.vood.dmgen.datamodel.sealedData.OptionalDealParamDetail
+import ru.vood.dmgen.datamodel.sealedData.OptionalDealParamEntity
+import ru.vood.dmgen.datamodel.sealedData.intf.EntityData
+import ru.vood.dmgen.datamodel.sealedData.intf.IEntityData
+import ru.vood.dmgen.datamodel.sealedData.intf.SealedEntityData
+import ru.vood.dmgen.datamodel.sealedData.oneOf.DealOneDataDetail
+import ru.vood.dmgen.datamodel.sealedData.oneOf.DealOneDataEntity
+import ru.vood.dmgen.datamodel.sealedData.oneOf.DealTwoDataDetail
+import ru.vood.dmgen.datamodel.sealedData.oneOf.DealTwoDataEntity
+import ru.vood.dmgen.datamodel.sealedData.oneOf.OneOfDtoDetail
+import ru.vood.dmgen.datamodel.sealedData.oneOf.OneOfDtoEntity
+
+@Generated(value = [&quot;ru.vood.processor.datamodel.generator.meta.EntityMapGenerator&quot;])
+@MetaEntities
+public enum class EntityEnum {
+  Deal,
+  DealOneData,
+  DealParamaggregate,
+  DealTwoData,
+  NoFKAndUk,
+  OneOfDto,
+  OptionalDealParam,
+  ;
+
+  public fun entityData(): IEntityData = entityDataMap[this]!!
+
+  public companion object {
+    private val entityDataMap:
+        EnumMap&lt;ru.vood.dmgen.datamodel.sealedData.metaEnum.EntityEnum, IEntityData&gt; = EnumMap(
+      mapOf(
+            Deal to EntityData(
+                designClass = ru.vood.dmgen.datamodel.sealedData.Deal::class,
+                runtimeClass = DealEntity::class,
+                runtimeSyntheticClass = DealDetail::class,
+                serializer = DealEntity.serializer(),
+                serializerSynthetic = DealDetail.serializer(),
+                entityName = Deal,
+                comment = &quot;Это сущность Сделка&quot;,
+                entityType = FlowEntityType.AGGREGATE
+                ),
+            DealParamaggregate to EntityData(
+                designClass = ru.vood.dmgen.datamodel.sealedData.DealParamaggregate::class,
+                runtimeClass = DealParamaggregateEntity::class,
+                runtimeSyntheticClass = DealParamaggregateDetail::class,
+                serializer = DealParamaggregateEntity.serializer(),
+                serializerSynthetic = DealParamaggregateDetail.serializer(),
+                entityName = DealParamaggregate,
+                comment = &quot;Параметр сделки, Агрегат&quot;,
+                entityType = FlowEntityType.AGGREGATE
+                ),
+            NoFKAndUk to EntityData(
+                designClass = ru.vood.dmgen.datamodel.sealedData.NoFKAndUk::class,
+                runtimeClass = NoFKAndUkEntity::class,
+                runtimeSyntheticClass = NoFKAndUkDetail::class,
+                serializer = NoFKAndUkEntity.serializer(),
+                serializerSynthetic = NoFKAndUkDetail.serializer(),
+                entityName = NoFKAndUk,
+                comment = &quot;Параметр сделки, отношение к сделке один к одному&quot;,
+                entityType = FlowEntityType.INNER
+                ),
+            OptionalDealParam to EntityData(
+                designClass = ru.vood.dmgen.datamodel.sealedData.OptionalDealParam::class,
+                runtimeClass = OptionalDealParamEntity::class,
+                runtimeSyntheticClass = OptionalDealParamDetail::class,
+                serializer = OptionalDealParamEntity.serializer(),
+                serializerSynthetic = OptionalDealParamDetail.serializer(),
+                entityName = OptionalDealParam,
+                comment = &quot;Параметр сделки, отношение к сделке один к одному, опциональный&quot;,
+                entityType = FlowEntityType.INNER
+                ),
+            OneOfDto to SealedEntityData(
+            designClass = ru.vood.dmgen.datamodel.sealedData.oneOf.OneOfDto::class,
+            runtimeClass = OneOfDtoEntity::class,
+            runtimeSyntheticClass = OneOfDtoDetail::class,
+            serializer = OneOfDtoEntity.serializer(),
+            serializerSynthetic = OneOfDtoDetail.serializer(),
+            entityName = OneOfDto,
+            comment = &quot;Параметр сделки, отношение к сделке один к одному&quot;,
+            entityType = FlowEntityType.ONE_OF,
+            children = setOf(
+                  DealOneData,
+                  DealTwoData,
+            )
+            ),
+            DealOneData to EntityData(
+                designClass = ru.vood.dmgen.datamodel.sealedData.oneOf.DealOneData::class,
+                runtimeClass = DealOneDataEntity::class,
+                runtimeSyntheticClass = DealOneDataDetail::class,
+                serializer = DealOneDataEntity.serializer(),
+                serializerSynthetic = DealOneDataDetail.serializer(),
+                entityName = DealOneData,
+                comment = &quot;Параметр сделки, отношение к сделке один к одному&quot;,
+                entityType = FlowEntityType.INNER
+                ),
+            DealTwoData to EntityData(
+                designClass = ru.vood.dmgen.datamodel.sealedData.oneOf.DealTwoData::class,
+                runtimeClass = DealTwoDataEntity::class,
+                runtimeSyntheticClass = DealTwoDataDetail::class,
+                serializer = DealTwoDataEntity.serializer(),
+                serializerSynthetic = DealTwoDataDetail.serializer(),
+                entityName = DealTwoData,
+                comment = &quot;Параметр сделки, отношение к сделке один к одному&quot;,
+                entityType = FlowEntityType.INNER
+                ),
+            ))
+
+            public fun entityMetaByStr(`value`: String):
+                ru.vood.dmgen.datamodel.sealedData.metaEnum.EntityEnum = when(value) {
+              &quot;Deal&quot; -&gt; Deal
+              &quot;DealParamaggregate&quot; -&gt; DealParamaggregate
+              &quot;NoFKAndUk&quot; -&gt; NoFKAndUk
+              &quot;OptionalDealParam&quot; -&gt; OptionalDealParam
+              &quot;OneOfDto&quot; -&gt; OneOfDto
+              &quot;DealOneData&quot; -&gt; DealOneData
+              &quot;DealTwoData&quot; -&gt; DealTwoData
+              else -&gt; error(&quot;&quot;&quot;In ${EntityEnum::class.java.simpleName} not found enum with name
+                  $value&quot;&quot;&quot;)
+            }
+          }
+        }
+&gt; but was: &lt;package test.metaEnum
+
+import java.util.EnumMap
+import javax.`annotation`.processing.Generated
+import kotlin.String
+import ru.vood.dmgen.`annotation`.FlowEntityType
+import ru.vood.dmgen.`annotation`.MetaEntities
+import ru.vood.dmgen.datamodel.sealedData.DealDetail
+import ru.vood.dmgen.datamodel.sealedData.DealEntity
+import ru.vood.dmgen.datamodel.sealedData.DealParamaggregateDetail
+import ru.vood.dmgen.datamodel.sealedData.DealParamaggregateEntity
+import ru.vood.dmgen.datamodel.sealedData.NoFKAndUkDetail
+import ru.vood.dmgen.datamodel.sealedData.NoFKAndUkEntity
+import ru.vood.dmgen.datamodel.sealedData.OptionalDealParamDetail
+import ru.vood.dmgen.datamodel.sealedData.OptionalDealParamEntity
+import ru.vood.dmgen.datamodel.sealedData.oneOf.DealOneDataDetail
+import ru.vood.dmgen.datamodel.sealedData.oneOf.DealOneDataEntity
+import ru.vood.dmgen.datamodel.sealedData.oneOf.DealTwoDataDetail
+import ru.vood.dmgen.datamodel.sealedData.oneOf.DealTwoDataEntity
+import ru.vood.dmgen.datamodel.sealedData.oneOf.OneOfDtoDetail
+import ru.vood.dmgen.datamodel.sealedData.oneOf.OneOfDtoEntity
+import ru.vood.processor.datamodel.packageForDataModelConfigProcessorProviderTest.create.intf.EntityData
+import ru.vood.processor.datamodel.packageForDataModelConfigProcessorProviderTest.create.intf.IEntityData
+import ru.vood.processor.datamodel.packageForDataModelConfigProcessorProviderTest.create.intf.SealedEntityData
+
+@Generated(value = [&quot;ru.vood.processor.datamodel.generator.meta.EntityMapGenerator&quot;])
+@MetaEntities
+public enum class EntityEnum {
+  Deal,
+  DealOneData,
+  DealParamaggregate,
+  DealTwoData,
+  NoFKAndUk,
+  OneOfDto,
+  OptionalDealParam,
+  ;
+
+  public fun entityData(): IEntityData = entityDataMap[this]!!
+
+  public companion object {
+    private val entityDataMap:
+        EnumMap&lt;ru.vood.processor.datamodel.packageForDataModelConfigProcessorProviderTest.create.metaEnum.EntityEnum, IEntityData&gt;
+        = EnumMap(
+      mapOf(
+            Deal to EntityData(
+                designClass = ru.vood.dmgen.datamodel.sealedData.Deal::class,
+                runtimeClass = DealEntity::class,
+                runtimeSyntheticClass = DealDetail::class,
+                serializer = DealEntity.serializer(),
+                serializerSynthetic = DealDetail.serializer(),
+                entityName = Deal,
+                comment = &quot;Это сущность Сделка&quot;,
+                entityType = FlowEntityType.AGGREGATE
+                ),
+            DealParamaggregate to EntityData(
+                designClass = ru.vood.dmgen.datamodel.sealedData.DealParamaggregate::class,
+                runtimeClass = DealParamaggregateEntity::class,
+                runtimeSyntheticClass = DealParamaggregateDetail::class,
+                serializer = DealParamaggregateEntity.serializer(),
+                serializerSynthetic = DealParamaggregateDetail.serializer(),
+                entityName = DealParamaggregate,
+                comment = &quot;Параметр сделки, Агрегат&quot;,
+                entityType = FlowEntityType.AGGREGATE
+                ),
+            NoFKAndUk to EntityData(
+                designClass = ru.vood.dmgen.datamodel.sealedData.NoFKAndUk::class,
+                runtimeClass = NoFKAndUkEntity::class,
+                runtimeSyntheticClass = NoFKAndUkDetail::class,
+                serializer = NoFKAndUkEntity.serializer(),
+                serializerSynthetic = NoFKAndUkDetail.serializer(),
+                entityName = NoFKAndUk,
+                comment = &quot;Параметр сделки, отношение к сделке один к одному&quot;,
+                entityType = FlowEntityType.INNER
+                ),
+            OptionalDealParam to EntityData(
+                designClass = ru.vood.dmgen.datamodel.sealedData.OptionalDealParam::class,
+                runtimeClass = OptionalDealParamEntity::class,
+                runtimeSyntheticClass = OptionalDealParamDetail::class,
+                serializer = OptionalDealParamEntity.serializer(),
+                serializerSynthetic = OptionalDealParamDetail.serializer(),
+                entityName = OptionalDealParam,
+                comment = &quot;Параметр сделки, отношение к сделке один к одному, опциональный&quot;,
+                entityType = FlowEntityType.INNER
+                ),
+            OneOfDto to SealedEntityData(
+            designClass = ru.vood.dmgen.datamodel.sealedData.oneOf.OneOfDto::class,
+            runtimeClass = OneOfDtoEntity::class,
+            runtimeSyntheticClass = OneOfDtoDetail::class,
+            serializer = OneOfDtoEntity.serializer(),
+            serializerSynthetic = OneOfDtoDetail.serializer(),
+            entityName = OneOfDto,
+            comment = &quot;Параметр сделки, отношение к сделке один к одному&quot;,
+            entityType = FlowEntityType.ONE_OF,
+            children = setOf(
+                  DealOneData,
+                  DealTwoData,
+            )
+            ),
+            DealOneData to EntityData(
+                designClass = ru.vood.dmgen.datamodel.sealedData.oneOf.DealOneData::class,
+                runtimeClass = DealOneDataEntity::class,
+                runtimeSyntheticClass = DealOneDataDetail::class,
+                serializer = DealOneDataEntity.serializer(),
+                serializerSynthetic = DealOneDataDetail.serializer(),
+                entityName = DealOneData,
+                comment = &quot;Параметр сделки, отношение к сделке один к одному&quot;,
+                entityType = FlowEntityType.INNER
+                ),
+            DealTwoData to EntityData(
+                designClass = ru.vood.dmgen.datamodel.sealedData.oneOf.DealTwoData::class,
+                runtimeClass = DealTwoDataEntity::class,
+                runtimeSyntheticClass = DealTwoDataDetail::class,
+                serializer = DealTwoDataEntity.serializer(),
+                serializerSynthetic = DealTwoDataDetail.serializer(),
+                entityName = DealTwoData,
+                comment = &quot;Параметр сделки, отношение к сделке один к одному&quot;,
+                entityType = FlowEntityType.INNER
+                ),
+            ))
+
+            public fun entityMetaByStr(`value`: String):
+                ru.vood.processor.datamodel.packageForDataModelConfigProcessorProviderTest.create.metaEnum.EntityEnum
+                = when(value) {
+              &quot;Deal&quot; -&gt; Deal
+              &quot;DealParamaggregate&quot; -&gt; DealParamaggregate
+              &quot;NoFKAndUk&quot; -&gt; NoFKAndUk
+              &quot;OptionalDealParam&quot; -&gt; OptionalDealParam
+              &quot;OneOfDto&quot; -&gt; OneOfDto
+              &quot;DealOneData&quot; -&gt; DealOneData
+              &quot;DealTwoData&quot; -&gt; DealTwoData
+              else -&gt; error(&quot;&quot;&quot;In ${EntityEnum::class.java.simpleName} not found enum with name
+                  $value&quot;&quot;&quot;)
+            }
+          }
+        }
+&gt;
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1142)
+	at app//ru.vood.processor.datamodel.abstraction.AbstractGeneratorTest.compareTextFile(AbstractGeneratorTest.kt:40)
+	at app//ru.vood.processor.datamodel.generator.meta.EntityMapGeneratorTest.textFileTest(EntityMapGeneratorTest.kt:35)
+	at java.base@21.0.4/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base@21.0.4/java.lang.reflect.Method.invoke(Method.java:580)
+	at app//org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+	at app//org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at app//org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at app//org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at app//org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestTemplateMethod(TimeoutExtension.java:94)
+	at app//org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at app//org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at app//org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at app//org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask$DefaultDynamicTestExecutor.execute(NodeTestTask.java:226)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask$DefaultDynamicTestExecutor.execute(NodeTestTask.java:204)
+	at app//org.junit.jupiter.engine.descriptor.TestTemplateTestDescriptor.execute(TestTemplateTestDescriptor.java:142)
+	at app//org.junit.jupiter.engine.descriptor.TestTemplateTestDescriptor.lambda$execute$2(TestTemplateTestDescriptor.java:110)
+	at java.base@21.0.4/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base@21.0.4/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base@21.0.4/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base@21.0.4/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base@21.0.4/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base@21.0.4/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base@21.0.4/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base@21.0.4/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base@21.0.4/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base@21.0.4/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base@21.0.4/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base@21.0.4/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at java.base@21.0.4/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
+	at java.base@21.0.4/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base@21.0.4/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base@21.0.4/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+	at java.base@21.0.4/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base@21.0.4/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base@21.0.4/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base@21.0.4/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base@21.0.4/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base@21.0.4/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base@21.0.4/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
+	at java.base@21.0.4/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base@21.0.4/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base@21.0.4/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base@21.0.4/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base@21.0.4/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base@21.0.4/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base@21.0.4/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base@21.0.4/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base@21.0.4/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base@21.0.4/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base@21.0.4/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
+	at java.base@21.0.4/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base@21.0.4/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base@21.0.4/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base@21.0.4/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base@21.0.4/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base@21.0.4/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base@21.0.4/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at app//org.junit.jupiter.engine.descriptor.TestTemplateTestDescriptor.execute(TestTemplateTestDescriptor.java:110)
+	at app//org.junit.jupiter.engine.descriptor.TestTemplateTestDescriptor.execute(TestTemplateTestDescriptor.java:44)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base@21.0.4/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base@21.0.4/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at app//org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at app//org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at app//org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at app//org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at app//org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:124)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:94)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:63)
+	at java.base@21.0.4/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base@21.0.4/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+	at jdk.proxy1/jdk.proxy1.$Proxy4.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:200)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:121)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

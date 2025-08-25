@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.vood.processor.datamodel.DataModelConfigProcessorProviderTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-08-25T13:39:52.264Z" hostname="vood" time="3.159">
+  <properties/>
+  <testcase name="create()" classname="ru.vood.processor.datamodel.DataModelConfigProcessorProviderTest" time="3.159"/>
+  <system-out><![CDATA[w: [ksp] KSP options {}
+w: [ksp] Unable to process:ru.vood.processor.datamodel.DataModelConfigProcessor:   Deal;DealParamOneToOne;DealParamOneToOneOptional;DealParamSet;DealParamSetNoUK
+1
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

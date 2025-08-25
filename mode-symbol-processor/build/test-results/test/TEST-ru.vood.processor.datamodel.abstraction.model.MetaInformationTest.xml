@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.vood.processor.datamodel.abstraction.model.MetaInformationTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2025-08-25T13:39:55.512Z" hostname="vood" time="0.004">
+  <properties/>
+  <testcase name="getNullableProbSetDefaultNull()" classname="ru.vood.processor.datamodel.abstraction.model.MetaInformationTest" time="0.0"/>
+  <testcase name="getRootPackage()" classname="ru.vood.processor.datamodel.abstraction.model.MetaInformationTest" time="0.001"/>
+  <testcase name="getEntityDependency()" classname="ru.vood.processor.datamodel.abstraction.model.MetaInformationTest" time="0.002"/>
+  <testcase name="getEntities()" classname="ru.vood.processor.datamodel.abstraction.model.MetaInformationTest" time="0.0"/>
+  <testcase name="getAggregateInnerDep()" classname="ru.vood.processor.datamodel.abstraction.model.MetaInformationTest" time="0.001"/>
+  <testcase name="getMetaForeignKeys()" classname="ru.vood.processor.datamodel.abstraction.model.MetaInformationTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
