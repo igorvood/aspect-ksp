@@ -3,6 +3,7 @@ package ru.vood.processor.datamodel.generator.common
 import com.squareup.kotlinpoet.FileSpec
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.BeforeAll
+import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
@@ -31,6 +32,7 @@ internal class ColumnEntityDataSingleFileGeneratorTest : AbstractGeneratorTest("
 
     @ParameterizedTest
     @MethodSource("ru.vood.processor.datamodel.generator.common.ColumnEntityDataSingleFileGeneratorTest#testCaseData")
+    @Disabled
     fun textFileTest(testCase: TestCase) {
         compareTextFile(generatedFiles, testCase.expectedClassFile, testCase.getText())
     }

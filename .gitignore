@@ -29,3 +29,5 @@ replay_pid*
 symbol-processor-common/build
 .gradle
 mode-symbol-processor/build
+ksp-test/build
+build
